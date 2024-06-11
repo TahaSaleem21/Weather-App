@@ -41,7 +41,6 @@ function getWeather() {
         "Could not fetch weather data";
     });
 }
-
 function getWeatherIcon(description) {
   if (description.includes("cloud")) return "<i class='fas fa-cloud'></i>";
   if (description.includes("mist") || description.includes("haze"))

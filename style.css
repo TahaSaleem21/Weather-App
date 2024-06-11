@@ -1,6 +1,9 @@
 body.weather-app {
   background-image: url("https://c0.wallpaperflare.com/preview/273/564/913/storm-sky-cloud-lightning.jpg");
   background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 
