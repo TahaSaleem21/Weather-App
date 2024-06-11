@@ -1,10 +1,23 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "montserrat", sans-serif;
+}
+
 body.weather-app {
   background-image: url("https://c0.wallpaperflare.com/preview/273/564/913/storm-sky-cloud-lightning.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -114,4 +127,19 @@ h1 {
   to {
     transform: rotate(360deg);
   }
+}
+.footer {
+  width: 100%;
+  height: 49px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.footer p {
+  font-size: 13px;
 }
