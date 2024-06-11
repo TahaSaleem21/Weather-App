@@ -1,9 +1,20 @@
 document.querySelector(".search-btn").addEventListener("click", getWeather);
 
+document
+  .querySelector(".search-bar")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      getWeather();
+    }
+  });
+
 function getWeather() {
-  const apiKey = "d8e6daf81a0c33fb18d62f08d33c7c7b"; // Replace with your API key
+  const apiKey = "d8e6daf81a0c33fb18d62f08d33c7c7b";
   const city = document.querySelector(".search-bar").value;
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  setTimeout(function () {
+    document.querySelector(".loading").style.display = "block";
+  }, 100);
 
   fetch(apiUrl)
     .then((response) => response.json())

@@ -1,5 +1,5 @@
 body.weather-app {
-  background-image: url("https://source.unsplash.com/1600x900/?weather");
+  background-image: url("https://c0.wallpaperflare.com/preview/273/564/913/storm-sky-cloud-lightning.jpg");
   background-size: cover;
   font-family: "Montserrat", sans-serif;
 }
@@ -85,4 +85,30 @@ h1 {
 .location {
   font-size: 20px;
   color: #333;
+}
+.loading {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+.loading::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
